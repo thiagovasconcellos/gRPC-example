@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+service UserService {
+  rpc createUser (CreateUser) returns (User) {}
+  rpc listUsers (Void) returns (ListUsers) {}
+}
+
+message Void {}
+
+message CreateUser {
+  required string login = 1;
+  required string password = 2;
+  optional string avatar = 3;
+}
+
+message ListUsers {
+  repeated User users = 1;
+}
+
+message Geolocation {
+  float latitude = 1;
+  float longitude = 2;
+}
+message Address {
+  string country = 1;
+  string city = 2;
+  string state = 3;
+  Geolocation geolocation = 4;
+}
+
+message User {
+  int32 id = 1;
+  string login = 2;
+  string email = 3;
+  string password = 4;
+  string avatar = 5;
+  Address address = 6;
+}
+

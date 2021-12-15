@@ -1,0 +1,15 @@
+{
+  "name": "grpc-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.4.4",
+    "@grpc/proto-loader": "^0.6.7",
+    "express": "^4.17.1",
+    "google-protobuf": "^3.19.1"
+  },
+  "devDependencies": {
+    "faker": "^5.5.3"
+  }
+}
